@@ -25,9 +25,9 @@ echo 'downloading speedtest...'
 mkdir /opt/lan-speedtest
 mkdir /opt/lan-speedtest/results
 echo '0' > config.txt
-cd /opt/lan-speedtest
-git clone https://github.com/HomefibreDEV/iperf3xraspberry/speedtest.git
-chmod +x /opt/lan-speedtest/speedtest.py
+git clone https://github.com/HomefibreDEV/iperf3xraspberry/speedtest.git /opt/lan-speedtest
+cd /opt/lan-speedtest/speedtest
+chmod +x /opt/lan-speedtest/speedtest/speedtest.py
 
 #add iPerf to autostart
 echo 'add speedtest to autostart...'
@@ -36,7 +36,7 @@ echo 'echo "starting speedtest in 10sec"' >> /home/pi/.bashrc
 echo 'press [Ctrl]+[C] to cancel' >> /home/pi/.bashrc
 echo '/bin/sleep 10' >> /home/pi/.bashrc
 echo 'clear' >> /home/pi/.bashrc
-echo 'cd /opt/lan-speedtest' >> /home/pi/.bashrc
+echo 'cd /opt/lan-speedtest/speedtest' >> /home/pi/.bashrc
 echo 'sudo python3 speedtest.py' >> /home/pi/.bashrc
 
 #change hostname
