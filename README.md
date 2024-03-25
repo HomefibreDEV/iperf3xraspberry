@@ -18,7 +18,7 @@ Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf
 1) Server.sh laden und ausführen.
    
           git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
-          cd /iperf3xraspberry 
+          cd ./iperf3xraspberry 
           sudo chmod +x server.sh
           sudo ./server.sh
 
@@ -48,7 +48,7 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
 6) client.sh laden und ausführen.
        
         git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
-        cd /iperf3xraspberry 
+        cd ./iperf3xraspberry 
         sudo chmod +x client.sh
         sudo ./client.sh
 
