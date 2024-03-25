@@ -22,11 +22,10 @@ sudo apt-get install git -y
 
 #make directories and download speedtest
 echo 'downloading speedtest...'
-mkdir /opt/lan-speedtest
-mkdir /opt/lan-speedtest/results
 echo '0' > config.txt
 git clone https://github.com/HomefibreDEV/iperf3xraspberry.git /opt/lan-speedtest
 cd /opt/lan-speedtest/speedtest
+mkdir /opt/lan-speedtest/results
 chmod +x /opt/lan-speedtest/speedtest/speedtest.py
 
 #add iPerf to autostart
