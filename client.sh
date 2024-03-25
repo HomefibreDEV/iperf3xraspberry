@@ -25,7 +25,7 @@ echo 'downloading speedtest...'
 mkdir /opt/lan-speedtest
 mkdir /opt/lan-speedtest/results
 echo '0' > config.txt
-git clone https://github.com/HomefibreDEV/iperf3xraspberry/speedtest.git /opt/lan-speedtest
+git clone https://github.com/HomefibreDEV/iperf3xraspberry.git /opt/lan-speedtest
 cd /opt/lan-speedtest/speedtest
 chmod +x /opt/lan-speedtest/speedtest/speedtest.py
 
