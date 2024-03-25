@@ -3,6 +3,7 @@
 echo '-----------------------------------------------'
 echo '-------- homefibre - iPerf x Raspberry --------'
 echo '-------------- by Stefan Marbler --------------'
+echo '------------- and Alexadner Maier -------------'
 echo '-----------------------------------------------'
 echo ''
 echo 'Starting with the configuration...'
@@ -16,6 +17,8 @@ echo 'installing iPerf3'
 sudo apt-get install iperf3 -y
 echo 'installing nc'
 sudo apt-get install netcat -y
+echo 'installing git'
+sudo apt-get install git -y
 
 #make directories and download speedtest
 echo 'downloading speedtest...'
@@ -23,7 +26,7 @@ mkdir /opt/lan-speedtest
 mkdir /opt/lan-speedtest/results
 echo '0' > config.txt
 cd /opt/lan-speedtest
-wget https://stefanmrb.eu/downloads/iperf-speedtest/speedtest.py
+git clone https://github.com/HomefibreDEV/iperf3xraspberry/speedtest.git
 chmod +x /opt/lan-speedtest/speedtest.py
 
 #add iPerf to autostart
@@ -59,6 +62,7 @@ echo "" >> /etc/motd
 echo "-----------------------------------------------" >> /etc/motd
 echo "-------- homefibre - iPerf x Raspberry --------" >> /etc/motd
 echo "-------------- by Stefan Marbler --------------" >> /etc/motd
+echo "------------- and Alexadner Maier -------------" >> /etc/motd
 echo "-----------------------------------------------" >> /etc/motd
 echo "" >> /etc/motd
 

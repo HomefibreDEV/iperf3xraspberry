@@ -3,6 +3,7 @@
 # -----------------------------------------------
 # -------- homefibre - iPerf x Raspberry --------
 # -------------- by Stefan Marbler --------------
+# ------------- and Alexadner Maier -------------
 # -----------------------------------------------
 
 # import Modules
@@ -257,6 +258,7 @@ class Controller:
         print('\n -----------------------------------------------\n',
             '-------- homefibre - iPerf x Raspberry --------\n',
             '-------------- by Stefan Marbler --------------\n',
+			'------------ and Alexadner Maier --------------\n',
             '-----------------------------------------------')
         if self.search.ping_server() is 1:
             print('STATUS: Server found!')
@@ -293,7 +295,7 @@ class Controller:
 iperf_server_ip = '10.10.10.111'  # set your iPerf server's IP  10.10.10.111
 iperf_server_port = '5201'  # set your iPerf server's Port
 
-iperf_args = '' # set additional parameters for iPerf
+iperf_args = '-t 30' # set additional parameters for iPerf
 
 testnr = GetTestNum().getNum()
 filename = 'result-' + str(testnr) + '.txt'  # set filename
