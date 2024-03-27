@@ -2,6 +2,8 @@
     git clone need to be tested!
     additional iperf3 arguments need to be tested!
     for raspberry pi os lite (32-bit)
+    Display is white until driver is installed.
+    USB-Drive is working with USB 3 blue marked USB ports in our testbed.
    
 known issue with display in installation process. If display didn't show comand line, repeat:
 
