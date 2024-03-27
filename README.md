@@ -42,25 +42,30 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
    
         sudo apt update -y && sudo apt-get upgrade -y && sudo apt install git -y
 
-2) Die folgenden beiden Zeilen aus /etc/rc.local löschen:
-       
-       sleep 7
-       fbcp &
+2) Die Datei /etc/rc.local bearbeiten
+
+        sudo nano /etc/rc.local
+
+    und die folgenden beiden Zeilen löschen:
+
+     
+           sleep 7
+           fbcp &
       
-3) Display Treiber installieren
+5) Display Treiber installieren
 
         git clone https://github.com/goodtft/LCD-show.git
         chmod -R 755 LCD-show
         cd /home/pi/LCD-show/
         sudo ./MHS35-show
 
-4) Autologin einstellen:
+6) Autologin einstellen:
   
         sudo raspi-config
 
    System options / Boot / Auto Login / Console Autologin
 
-5) client.sh laden und ausführen.
+7) client.sh laden und ausführen.
        
         git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
         cd ./iperf3xraspberry 
