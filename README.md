@@ -2,6 +2,11 @@
     git clone need to be tested!
     additional iperf3 arguments need to be tested!
     for raspberry pi os lite (32-bit)
+   
+known issue with display in installation process. If display didn't show comand line, repeat:
+
+        cd /home/pi/LCD-show/
+        sudo ./MHS35-show
 
 ## Beschschreibung: ##
   Dieses Projekt bietet die Möglichkeit, mithilfe von zwei Raspberry Pi 4B die Übertragungsgeschwindigkeit zwischen zwei Punkten in einem LAN zu messen.
@@ -13,6 +18,12 @@
     • 2x Micro SD-Karte
     • 2x USB-C 15.3W Powersupply
     • 1x Raspberry Pi 4 Touch Screen (https://amzn.eu/d/aauua0w)
+
+## Vorbereitung Raspberry Pi ##
+
+  • Bauen Sie das Raspberry in das Gehäuse mit Display laut Anleitung ein
+  • Installieren Sie auf der Micro SD-Karte Raspberry Pi OS Lite (32-Bit) mit Raspberry Pi Imager
+
 
 ## Installation Server: ##
 Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
