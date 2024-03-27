@@ -1,16 +1,18 @@
 ## Anmerkung: ##
     git clone need to be tested!
     additional iperf3 arguments need to be tested!
+    for raspberry pi os lite (32-bit)
 
 ## Beschschreibung: ##
   Dieses Projekt bietet die Möglichkeit, mithilfe von zwei Raspberry Pi 4B die Übertragungsgeschwindigkeit zwischen zwei Punkten in einem LAN zu messen.
   Dafür läuft auf einem der beiden Raspberry sein iPerf3-Server und am anderen ein Pythonskript welches einen iPerf3-Speedtest startet und das Ergebnis auf einen USB-Stick oder lokal am Pi speichert.
 
 ## Benötigte Komponenten: ##
+
     • 2x Raspberry Pi 4 Model B
-    • 2x SD-Karte
+    • 2x Micro SD-Karte
     • 2x USB-C 15.3W Powersupply
-    • 1x Raspberry Pi 4 Touch Screen
+    • 1x Raspberry Pi 4 Touch Screen (https://amzn.eu/d/aauua0w)
 
 ## Installation Server: ##
 Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
@@ -18,7 +20,7 @@ Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf
 1) Server.sh laden und ausführen.
    
           git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
-          cd ./iperf3xraspberry 
+          cd ./iperf3xraspberry
           sudo chmod +x server.sh
           sudo ./server.sh
 
@@ -26,15 +28,18 @@ Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf
 ## Installation Client: ##    
 Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speichermedium angeschossen ist und speichert entsprechend entweder lokal oder auf dem Speichermedium.
 
-1) Display Treiber installieren:
+1) Update durchführen, Git herunterladen
    
         sudo apt update -y && sudo apt-get upgrade -y && sudo apt install git -y
+
+2) Display Treiber installieren
+
         git clone https://github.com/goodtft/LCD-show.git
         chmod -R 755 LCD-show
         cd /home/pi/LCD-show/
         sudo ./MHS35-show
 
-2) Autologin einstellen:
+3) Autologin einstellen:
   
         sudo raspi-config
 
@@ -45,7 +50,7 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
        sleep 7
        fbcp &
       
-6) client.sh laden und ausführen.
+5) client.sh laden und ausführen.
        
         git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
         cd ./iperf3xraspberry 
