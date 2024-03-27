@@ -21,22 +21,19 @@ known issue with display in installation process. If display didn't show comand 
 
 ## Vorbereitung Raspberry Pi ##
 
-  • Bauen Sie das Raspberry in das Gehäuse mit Display laut Anleitung ein
-  • Installieren Sie auf der Micro SD-Karte Raspberry Pi OS Lite (32-Bit) mit Raspberry Pi Imager
+1) Bauen Sie das Raspberry in das Gehäuse mit Display laut Anleitung ein
 
-
-## Installation Server: ##
-Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
-    
-1) Server.sh laden und ausführen.
+       https://amzn.eu/d/aauua0w
    
-          git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
-          cd ./iperf3xraspberry
-          sudo chmod +x server.sh
-          sudo ./server.sh
+3) Installieren Sie auf der Micro SD-Karte Raspberry Pi OS Lite (32-Bit) mit Raspberry Pi Imager
+   
+        https://www.raspberrypi.com/software/
+   
+4) Updates durchführen und Git installieren
+   
+        sudo apt update -y && sudo apt-get upgrade -y && sudo apt install git -y
 
-
-## Installation Client: ##    
+## Installation Client auf dem Rasperry: ##    
 Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speichermedium angeschossen ist und speichert entsprechend entweder lokal oder auf dem Speichermedium.
 
 1) Update durchführen, Git herunterladen
@@ -68,6 +65,15 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
         sudo chmod +x client.sh
         sudo ./client.sh
 
+## Installation Server auf dem 2. Raspberry, falls vorhanden: ##
+Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
+    
+1) Server.sh laden und ausführen.
+   
+          git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
+          cd ./iperf3xraspberry
+          sudo chmod +x server.sh
+          sudo ./server.sh
 
 ## Einstellungen: ##
 
