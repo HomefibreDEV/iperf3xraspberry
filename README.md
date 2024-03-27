@@ -33,7 +33,7 @@ known issue with display in installation process. If display didn't show comand 
    
         sudo apt update -y && sudo apt-get upgrade -y && sudo apt install git -y
 
-## Installation Client auf dem Rasperry: ##    
+## Installation Client auf dem Raspberry Pi: ##    
 Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speichermedium angeschossen ist und speichert entsprechend entweder lokal oder auf dem Speichermedium.
 
 1) Update durchführen, Git herunterladen
@@ -65,7 +65,7 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
         sudo chmod +x client.sh
         sudo ./client.sh
 
-## Installation Server auf dem 2. Raspberry, falls vorhanden: ##
+## Installation Server auf dem 2. Raspberry Pi, falls vorhanden: ##
 Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
     
 1) Server.sh laden und ausführen.
