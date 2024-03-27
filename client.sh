@@ -49,11 +49,11 @@ echo '127.0.1.1       iPerf-Client' >> /etc/hosts
 echo 'iPerf-Client' > /etc/hostname
 
 #network configuration
-echo 'configure network'
-echo "" >> /etc/dhcpcd.conf
-echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
-echo 'interface eth0' >> /etc/dhcpcd.conf
-echo 'static ip_address=10.10.10.112/24' >> /etc/dhcpcd.conf
+#echo 'configure network'
+#echo "" >> /etc/dhcpcd.conf
+#echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
+#echo 'interface eth0' >> /etc/dhcpcd.conf
+#echo 'static ip_address=10.10.10.112/24' >> /etc/dhcpcd.conf
 
 #change motd
 echo "`clear`" > /etc/motd
