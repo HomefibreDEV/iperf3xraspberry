@@ -39,10 +39,12 @@ echo 'iPerf-Server' > /etc/hostname
 
 #network configuration
 echo 'configure network'
-echo "" >> /etc/dhcpcd.conf
+echo "" >> /etc/network/interfaces
 echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
-echo 'interface eth0' >> /etc/dhcpcd.conf
-echo 'static ip_address=10.10.10.111/24' >> /etc/dhcpcd.conf
+echo 'auto eth0' >> /etc/dhcpcd.conf
+echo 'iface eth0 inet static' >> /etc/dhcpcd.conf
+echo '   address 10.10.10.111/24' >> /etc/dhcpcd.conf
+echo '   gateway 10.10.10.254' >> /etc/dhcpcd.conf
 
 #change motd
 echo "`clear`" > /etc/motd
