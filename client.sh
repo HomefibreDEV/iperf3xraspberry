@@ -11,14 +11,10 @@ echo 'This may take some minutes...'
 echo ''
 
 #update and install iPerf
-echo 'updating Raspberry Pi'
-sudo apt-get update && sudo apt-get upgrade -y
 echo 'installing iPerf3'
 sudo apt-get install iperf3 -y
 echo 'installing nc'
 sudo apt-get install netcat -y
-#echo 'installing git'
-#sudo apt-get install git -y
 
 #make directories and download speedtest
 echo 'downloading speedtest...'
@@ -49,11 +45,13 @@ echo '127.0.1.1       iPerf-Client' >> /etc/hosts
 echo 'iPerf-Client' > /etc/hostname
 
 #network configuration
-#echo 'configure network'
-#echo "" >> /etc/dhcpcd.conf
-#echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
-#echo 'interface eth0' >> /etc/dhcpcd.conf
-#echo 'static ip_address=10.10.10.112/24' >> /etc/dhcpcd.conf
+echo 'configure network'
+echo "" >> /etc/network
+echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
+echo 'auto eth0' >> /etc/network/interfaces
+echo 'iface eth0 inet static' >> /etc/network/interfaces
+echo '   address 10.10.10.112/24' >> /etc/network/interfaces
+echo '   gateway 10.10.10.254' >> /etc/network/interfaces
 
 #change motd
 echo "`clear`" > /etc/motd
