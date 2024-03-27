@@ -46,8 +46,8 @@ echo 'iPerf-Client' > /etc/hostname
 
 #network configuration
 echo 'configure network'
-echo "" >> /etc/network
-echo '# custom static network config for iPerf client' >> /etc/dhcpcd.conf
+echo "" >> /etc/network/interfaces
+echo '# custom static network config for iPerf client' >> /etc/network/interfaces
 echo 'auto eth0' >> /etc/network/interfaces
 echo 'iface eth0 inet static' >> /etc/network/interfaces
 echo '   address 10.10.10.112/24' >> /etc/network/interfaces
