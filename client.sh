@@ -17,8 +17,8 @@ echo 'installing iPerf3'
 sudo apt-get install iperf3 -y
 echo 'installing nc'
 sudo apt-get install netcat -y
-echo 'installing git'
-sudo apt-get install git -y
+#echo 'installing git'
+#sudo apt-get install git -y
 
 #make directories and download speedtest
 echo 'downloading speedtest...'
