@@ -24,7 +24,7 @@ echo 'if [ "$_IP" ]; then' >> /etc/rc.local
 echo '  printf "My IP address is %s\n" "$_IP"' >> /etc/rc.local
 echo 'fi' >> /etc/rc.local
 echo '' >> /etc/rc.local
-echo '/bin/sleep 7 && sudo iperf3 -s &' >> /etc/rc.local
+echo '/bin/sleep 7 && sudo iperf3 -s' >> /etc/rc.local
 echo 'exit 0' >> /etc/rc.local
 
 #change hostname
