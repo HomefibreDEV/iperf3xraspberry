@@ -4,13 +4,7 @@
     for raspberry pi os lite (32-bit)
     Display is white until driver is installed.
     USB-Drive is working with USB 3 blue marked USB ports in our testbed.
-   
-known issue with display in installation process. If display didn't show comand line, repeat:
-
-    Server treies to start ipref -s a second time, it shows unable to start listener for connections: address allready in use. Iperf3. exiting 
   
-But it working fine for this purpose.
-
 ## Beschschreibung: ##
   Dieses Projekt bietet die Möglichkeit, mithilfe von zwei Raspberry Pi 4B die Übertragungsgeschwindigkeit zwischen zwei Punkten in einem LAN zu messen.
   Dafür läuft auf einem der beiden Raspberry sein iPerf3-Server und am anderen ein Pythonskript welches einen iPerf3-Speedtest startet und das Ergebnis auf einen USB-Stick oder lokal am Pi speichert.
