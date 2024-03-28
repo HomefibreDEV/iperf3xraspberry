@@ -2,6 +2,8 @@
 
 Diese Software wurde von unseren Praktikanten entwickelt. Unser Unternehmen bietet keinen zusätzlichen Support zu dieser Software. Sie dient zum basteln und ausprobieren und könnte in Zukunft durch weitere Projekte ergänzt oder erweitert werden.
 
+Viel Spaß beim ausprobiere und testen.
+
 Known issues and limitations:
 
     Small display is white until driver is installed!
