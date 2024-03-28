@@ -7,8 +7,9 @@
    
 known issue with display in installation process. If display didn't show comand line, repeat:
 
-        cd /home/pi/LCD-show/
-        sudo ./MHS35-show
+    Server treies to start ipref -s a second time, it shows unable to start listener for connections: address allready in use. Iperf3. exiting 
+  
+But it working fine for this purpose.
 
 ## Beschschreibung: ##
   Dieses Projekt bietet die Möglichkeit, mithilfe von zwei Raspberry Pi 4B die Übertragungsgeschwindigkeit zwischen zwei Punkten in einem LAN zu messen.
@@ -75,7 +76,13 @@ Der Client startet einen Test, ob eine Verbindung besteht und ob ein USB Speiche
 ## Installation Server auf dem 2. Raspberry Pi, falls vorhanden: ##
 Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf einen Client, der einen Test durchführen möchte.
     
-1) Server.sh laden und ausführen.
+1) Autologin einstellen:
+  
+        sudo raspi-config
+
+   System options / Boot / Auto Login / Console Autologin
+
+2) Server.sh laden und ausführen.
    
           git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
           cd ./iperf3xraspberry
