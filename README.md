@@ -1,6 +1,7 @@
 ## Anmerkung: ##
 
-Diese Software wurde von unseren Praktikanten entwickelt. Unser Unternehmen bietet keinen zusätzlichen Support zu dieser Software. Sie dient zum basteln und ausprobieren und könnte in Zukunft durch weitere Projekte ergänzt oder erweitert werden.
+Diese Software wurde von unseren Praktikanten entwickelt. Unser Unternehmen bietet keinen zusätzlichen Support zu dieser Software. 
+Sie dient zum Basteln und Ausprobieren und könnte in Zukunft von Euch durch weitere Projekte ergänzt oder erweitert werden.
 
 Viel Spaß beim ausprobiere und testen.
 
@@ -74,11 +75,16 @@ Der Server benötigt kein Display. Er wird einmalig angeschlossen und wartet auf
     
 1) Autologin einstellen:
   
-        sudo raspi-config
+       sudo raspi-config
 
-   System options / Boot / Auto Login / Console Autologin
+    Man findet die Entsprechende Einstellung unter:
 
-2) Server.sh laden und ausführen.
+       System options
+       Boot / Auto Login
+       Console Autologin
+    Diese Option einfach mit Enter bestätigen.
+   
+3) Server.sh laden und ausführen.
    
           git clone https://github.com/HomefibreDEV/iperf3xraspberry.git
           cd ./iperf3xraspberry
@@ -98,7 +104,8 @@ Sie können IPERF3 aus dem Interent auf Ihren PC laden und mit der Console IPERF
 2) Entpacken Sie iperf3 auf den Desktop
 
     Öffnen Sie den Ordner
-    Gehen Sie auf Datei > Windows Powershell öffnen
+    Gehen Sie in Windows 10 auf Datei > Windows Powershell öffnen
+    In Windows 11 finden sie im Kontextmenü der Maus (linke Maustaste) Terminal hier öffnen.
     
 Tippen Sie den folgenden Befehl ein, um IPERF3 Server auf dem PC zu starten:
 
